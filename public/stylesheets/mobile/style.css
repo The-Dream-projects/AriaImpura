@@ -1,0 +1,331 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  --background: #0E0E10;
+  --light-Blue: #00ADED;
+  --white: #ffffff;
+  --slider-Button: #E5E5E5;
+  --active-Button: #18181B;
+
+  font-family: 'Oxygen Mono', monospace;
+}
+
+.Center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Logo {
+  display: flex;
+
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.Logo img {
+  width: 35px;
+  height: 35px;
+}
+
+.Logo h2 {
+  color: var(--light-Blue);
+}
+
+@media screen and (orientation: portrait) {
+
+ body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+  
+  #DetectionPage {
+    height: 100vh;
+    width: 100vw;
+    background-color: #1A1A1C;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #Chart {
+    visibility: hidden;
+    width: 100%;
+    height: 500px;
+    position: relative;
+  }
+  
+  #line {
+    width: 100%;
+    height: 100%;
+  }
+  
+  #DetectionPage .Logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+
+  #DetectionContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #Legend {
+    width: 100%;
+    height: 25%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    margin-top: 10px;
+  }
+
+
+  #Legend #Air,
+  #Gas,
+  #CO2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #Air p {
+    color: var(--white);
+  }
+
+  #Air div {
+    background-color: var(--white);
+  }
+
+  #Gas p {
+    color: #6F9AAB;
+  }
+
+  #Gas div {
+    background-color: #6F9AAB;
+  }
+
+  #CO2 p {
+    color: #6F9AAB;
+  }
+
+  #CO2 div {
+    background-color: #6F9AAB;
+  }
+
+  #Legend #AirLegend,
+  #GasLegend,
+  #CO2Legend {
+    width: 50px;
+    height: 25px;
+    border-radius: 5px;
+  }
+
+  #InformationPage {
+    height: 100vh;
+    width: 100vw;
+
+    background-color: #1B1B1D;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  #InformationLogo {
+    display: flex;
+
+    position: relative;
+    top: 10px;
+    left: 10px;
+  }
+
+  #InformationLogo h2 {
+    color: var(--light-Blue);
+    margin-left: 20px;
+  }
+
+  #InformationLogo img {
+    width: 25px;
+    height: 25px;
+  }
+
+  #InformationContainer {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+  }
+
+  #InformationContainer p {
+    color: var(--white);
+    margin-left: 30px;
+    margin-top: 30%;
+  }
+
+  #ComponentsPage {
+    height: 100vh;
+    width: 100vw;
+    background-color: #1C1C1E;
+
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  #ComponentsLogo {
+    display: flex;
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+
+  #ComponentsLogo h2 {
+    color: var(--light-Blue);
+    margin-left: 20px;
+  }
+
+  #ComponentsLogo img {
+    width: 25px;
+    height: 25px;
+  }
+
+  #ComponentsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    height: 100%;
+  }
+
+  #ComponentsPage p{
+    color: var(--white);
+    margin-left: 30px;
+  }
+
+  #BreadBoardContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  #BreadBoardImg {
+    height: 150px;
+    width: 150px;
+  }
+
+  #BreadBoardImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;  
+  }
+
+  #PhotonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #PhotonImg {
+    height: 170px;
+    width: 170px;
+  }
+
+  #PhotonImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;  
+  }
+
+  #Mq-2Container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #Mq-2Img {
+    height: 170px;
+    width: 170px;
+  }
+
+  #Mq-2Img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;  
+  }
+
+  #turn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin: 50% 0 -50% 0;
+    top: 30%;
+    position: relative;
+  }
+
+}
+
+
+@media screen and (orientation: landscape) {
+  body {
+    background-color: #1A1A1C;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+    
+    #DetectionPage {
+      height: 100%;
+      width: 100%;
+      
+  
+      /* display: flex;
+      align-items: center;
+      justify-content: center; */
+    }
+
+    #DetectionPage .Logo {
+      display: none;
+    }
+    
+    #Chart {
+      /* width: 100%;
+      height: 500px; */
+      visibility: visible;
+      position: relative;
+    }
+
+    #InformationPage {
+      display: none;
+    }
+
+    #ComponentsPage {
+      display: none;
+    }
+
+    #line {
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    #turn{
+      display: none;
+    }
+
+  
+}

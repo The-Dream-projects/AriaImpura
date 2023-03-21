@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, orientation=landscape"
+    />
+    <link rel="stylesheet" href="/stylesheets/mobile/style.css" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <title>Particle</title>
+  </head>
+
+  <%var logo={image: "images/favicon.png" , text: "Ecosentry" }%>
+
+  <body>
+    <div id="Container">
+      <div id="DetectionPage" class="Center">
+        <div class="Logo">
+          <img src="images/favicon.png" alt="" srcset="" />
+          <h2>Grafico in tempo reale</h2>
+        </div>
+        <div id="ChartContainer">
+          <p id="turn">Gira il telefono per vedere il grafico</p>
+          <div id="Chart">
+            <canvas id="line"></canvas>
+          </div>
+          <!-- <div id="Legend">
+            <div id="Air">
+              <p>Clean Air</p>
+              <div id="AirLegend"></div>
+            </div>
+            <div id="Gas">
+              <p>Gas</p>
+              <div id="GasLegend"></div>
+            </div>
+            <div id="CO2">
+              <p>CO2</p>
+              <div id="CO2Legend"></div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+
+      <div id="ComponentsPage">
+        <div id="ComponentsLogo">
+          <img src="<%= logo.image %>" alt="Logo" />
+          <h2>Componenti</h2>
+        </div>
+        <div id="ComponentsContainer">
+          <div id="BreadBoardContainer">
+            <div id="BreadBoardImg">
+              <img src="images/BreadBoard.png" alt="" srcset="" />
+            </div>
+            <p>BreadBoard</p>
+          </div>
+          <div id="PhotonContainer">
+            <div id="PhotonImg">
+              <img src="images/Photon.png" alt="" srcset="" />
+            </div>
+            <p>Photon</p>
+          </div>
+          <div id="Mq-2Container">
+            <div id="Mq-2Img">
+              <img src="images/Mq-2.png" alt="" srcset="" />
+            </div>
+            <p>Mq-2</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="InformationPage">
+      <div id="InformationLogo">
+        <img src="<%= logo.image %>" alt="Logo" />
+        <h2>Informazioni</h2>
+      </div>
+
+      <div id="InformationContainer" class="Center">
+        <h1 style="color: green">Il nostro progetto:</h1>
+        <div id="Information">
+          <p>
+            Questo progetto ti permette di rilevare la presenza di impurità
+            nell'aria. Le potenzialità di un dispositivo IoT sono infinite,
+            questo è solo un esempio.
+            <br />
+            <br />
+            <u>Pensi che possa essere utile per te?</u><br /><br />
+            <u>Credi che ci siano applicazioni pratiche nella vita di tutti igiorni?</u><br />
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+  <script src="/scripts/mobile/script.js"></script>
+</html>

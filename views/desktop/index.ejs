@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/desktop/style.css" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <title>Ecosentry</title>
+  </head>
+
+   <%var logo={image: "images/favicon.png" , text: "Ecosentry" }%> <!--QUESTA E' UNA FUNZIONE JAVASCRIPT IN UN FILE HTML CHE VIENE RENDERIZZATO DA SERVER-->
+
+
+  <body>
+    <div id="Container">
+      <div id="Slider-container">
+        <div class="Slider-Button" id="slider1" onclick="slide(this)">
+          <div id="ActiveSlider1" class="ActiveSlider"></div>
+        </div>
+        <div class="Slider-Button" id="slider2" onclick="slide(this)">
+          <div id="ActiveSlider2" class="ActiveSlider"></div>
+        </div>
+        <div class="Slider-Button" id="slider3" onclick="slide(this)">
+          <div id="ActiveSlider3" class="ActiveSlider"></div>
+        </div>
+        <div class="Slider-Button" id="slider4" onclick="slide(this)">
+          <div id="ActiveSlider4" class="ActiveSlider"></div>
+        </div>
+      </div>
+
+      <div id="Slides">
+        <div id="Slide1" class="Slide">
+          <div class="Logo">
+            <img src="<%= logo.image %>" alt="Logo" />
+            <h3><%= logo.text %></h3>
+            
+          </div>
+          <div class="Center" id="CenterSlide1">
+            <div id="Title">
+              <h2 id="slide1Title">Rilevatore di impurità</h2>
+            </div>
+          </div>
+        </div>
+        <div id="Slide2" class="Slide">
+          <div class="Logo">
+            <img src="<%= logo.image %>" alt="Logo" />
+            <h3><%= logo.text %></h3>
+          </div>
+          <div class="Center">
+            <div id="Slide2Align">
+              <div id="Slide2-Left">
+                <div id="Slide2-LeftCenter">
+                  <h1>Rilevatore</h1>
+                  <p id="Slide2Text">
+                    Questo progetto ti permette di rilevare<br>
+                    la presenza di impurità nell'aria.<br>
+                    Le potenzialità di un dispositivo IoT<br>
+                    sono infinite, questo è solo un esempio. <br>
+                    <br>
+                    <u>Pensi che possa essere utile per te?</u><br>
+                    <u>Credi che ci siano applicazioni pratiche<br>
+                      nella vita di tutti i giorni?</u><br>
+                  </p>
+                </div>
+              </div>
+              <div id="Slide2-Right">
+                <img src="images/GasDetector.svg" alt="" srcset="" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="Slide3" class="Slide">
+          <div class="Logo">
+            <img src="<%= logo.image %>" alt="Logo" />
+            <h3><%= logo.text %></h3>
+          </div>
+          <div class="Center" id="CenterSlide2">
+            <div id="ComponentsSlider">
+              <div id="BreadboardContainer" class="ComponentsContainer">
+                <div id="BreadBoard">
+                  <img src="images/BreadBoard.png" alt="" />
+                </div>
+                <p>Breadboard</p>
+              </div>
+              <div id="PhotonContainer" class="ComponentsContainer">
+                <div id="Photon">
+                  <img src="images/Photon.png" alt="" />
+                </div>
+                <p>Photon</p>
+              </div>
+              <div id="Mq-2Container" class="ComponentsContainer">
+                <div id="Mq-2">
+                  <img src="images/Mq-2.png" alt="" />
+                </div>
+                <p>Mq-2</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="Slide4" class="Slide">
+          <div class="Logo">
+            <img src="<%= logo.image %>" alt="Logo" />
+            <h3><%= logo.text %></h3>
+          </div>
+          <div class="Center" id="CenterSlide4">
+            <div id="ChartContainer">
+              <canvas id="line"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="QrCode">
+        <img src="images/QRCode.png" alt="" />
+        <p style="color: white; font-size: 20px">
+          Scannerizza per accedere al sito
+        </p>
+      </div>
+    </div>
+
+    <h4 id="test">Utenti connessi in questo momento: <span id="counter">0</span></h3>
+  </body>
+
+
+  <!-- RICORDATI DI LASCIARE SEMPRE QUESTE LIBRERIE PER IL FUNZONAMENTO. -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+  <script src="/scripts/desktop/index.js"></script>
+</html>
